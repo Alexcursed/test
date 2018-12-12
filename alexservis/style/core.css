@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 2px;
+  
+ }
+body {
+ background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url(http://freephotos.online/wp-content/uploads/50202-arrows-background.jpg);
+ background-size:cover;
+ background-repeat: no-repeat;
+ color: azure;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+   "heder heder"
+   "title title"
+   "sidebar sidebar"
+   "sidebar content"
+   "footer footer";
+
+}
+.title{
+  grid-area: title;
+}
+.heder{
+  grid-area: heder;
+}
+.sidebar{
+  grid-area: sidebar;
+}
+.content{
+  grid-area: content;
+}
+.footer{
+  grid-area: footer;
+}
+
+header {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  width: 100%;
+  float: left;
+  padding:20px 0 20px 0;
+  background: rgba(83, 83, 184, 0.308);
+}
+footer{
+  width: 100%;
+  float:left;
+  padding:20px 0 20px 0;
+  background: rgba(18, 61, 201, 0.315);
+}
+nav ul li{
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  float: left;
+  width: 120px;
+  height: 40px;
+  background-color:rgba(20, 13, 13, 0.719);
+  line-height: 30px;
+  text-align:right;
+  margin: 2px;
+  font-size: 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  display: block;
+  float: left;
+  padding: 5px 20px;
+  color:rgba(250, 250, 250, 0.815);
+}
+nav ul li a:hover {
+background-color: rgba(69, 248, 114, 0.596);
+
+}
+nav ul li ul li {
+  display: none;
+}
+ul li:hover ul li{
+  display: block;
+}
+@media screen and (min-width:736px){
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+     ". heder heder ."
+     ". title title ."
+     ". sidebar sidebar ."
+     ". content content ."
+     ". footer footer .";
+     grid-gap: 10px;
+  
+  }
+
+}
